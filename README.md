@@ -1,9 +1,12 @@
 # Excitable Rho dynamics control cell shape and motility by sequentially activating ERM proteins and actomyosin contractility
-[Seph Marshall-Burghardt](), [Rodrigo Migueles-Ramirez](), [Qiyao Lin](), [Nada El Baba](), [Rayan Saada](), [Mustakim Umar](), [Kian Mavalwala](), [Arnold Hayer]()
-![GraphicalAbstract.png]
--> Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
--> Data can be found [here]().
--> Link to corresponding [GitHub repository]().
+[Seph Marshall-Burghardt](https://orcid.org/0009-0000-7634-9768), [Rodrigo Migueles-Ramirez](https://orcid.org/0000-0002-6087-1348), [Qiyao Lin](), [Nada El Baba](https://orcid.org/0000-0002-2658-8426), [Rayan Saada](), [Mustakim Umar](), [Kian Mavalwala](), [Arnold Hayer](https://orcid.org/0000-0001-7808-8880)
+
+![](GraphicalAbstract.png)
+
+- Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
+- Data can be found [here]().
+- Link to corresponding [GitHub repository](https://github.com/HayerLab/Marshall-Burghardt-SciAdv2024).
+
 ## Understanding file names
 ### Default naming convention
 Using the "jobs" feature of the Nikon HCS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. Inside each site folder, each channel data gets stored into a separate channel folder and the channel name gets appended to the file name (i.e.: 2_3_1_CFP.tiff). You will see this format in most of the data.
@@ -19,7 +22,7 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 * TT: Treatment duration (in hours)
 * CHNL: Channel name
 ## How to navigate the data
-The data is organized by figures in the paper. All the code necessary to preprocess, analyze the data and generate figures is inside the Code folder. We have created
+The data is organized by figures in the paper. All the code necessary to preprocess, analyze the data and generate figures is inside the Code folder. 
 
 The source images can be found under "Data" inside each date folder and then under "TIFF Stacks".
 Inside each dataset folder:
