@@ -1,0 +1,43 @@
+data_YYMMDD_description master folder 
+
+	> Raw 
+	- in row_col_site_channel_frame format. (ie 1_1_1_CFP_1.tif), 
+        - generally label them as CFP, FRET, mRuby for actin or myosin, and cyto for a cytoplasm marker. 
+
+
+	> ND2 files 
+	- store as background.nd2. run1.nd2, run2.nd2, etc. 
+	- this stores them in alphabetical order so the code accesses them properly. 
+
+	> Backgound
+	- row_col_site_channel_frame.tif
+
+	>tiff_stacks
+	- row_col_site_channel_frame_stacked.tif
+
+	>data 
+	- row_col_site_channel_frame_RatioData_raw.mat
+	- row_col_site_channel_frame_Bleach_raw.mat
+	- row_col_site_channel_frame_Outline_prelim.tiff
+        - row_col_site_channel_frame_RhoFRET_[0.7 1.3].tif (if you decide to make them). 
+
+	> cropped 
+		> 1,2,3,4,..... (number of cells you have)
+			> raw channel tiffs and backgrounds, as well as alignment parameters. 
+			> output
+				>  RatioData_raw, Bleach_raw, RatioData, Outline_prelim, Rho-FRET, mRuby_[0 3], etc. 
+			> edge_vels
+				>edge_vel_mapping_(3,6,10,15,20,25)
+					> edge_velcoity_map, Protrusion and FRET Values.m
+
+	> FRET buildup - retractions
+		> 1,2,3,... number you have 
+			> retraction.fig, retraction_statistics.m, Vel Map
+
+
+			
+
+
+
+
+ 
