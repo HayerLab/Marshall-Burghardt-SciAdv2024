@@ -23,7 +23,7 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 * CHNL: Channel name
 
 ## Navigating the repository 
-All code used in the analysis and processing of data found in the paper is present here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Step-by-step instructions for each panel and all scripts used are found in the README files in 'figure panel specific scripts and instructions'. 
+All code used in the data processing/analysis found in the paper is present here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Step-by-step instructions listing all scripts used for each panel can be found in the README files in 'figure panel specific scripts and instructions'. 
 ## How to navigate the data
 The data is organized by figures in the paper. All the code necessary to preprocess, analyze the data and generate figures is inside the Code folder. 
 
