@@ -1,4 +1,4 @@
-Edge_trackingedits used in the following figures: 
+Edge_tracking used in the following figures: 
 
 Fig 1C
 Fig 2 A-E (b) 
