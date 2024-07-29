@@ -1,6 +1,6 @@
 %% Test protrusion/FRET measurements
 % Required functions: 
-%       functions located folder "trackingcode"  
+%       functions located in folder "Edge Tracking support functions"  
 %       parametrizeCellEdge.m
 %       computeProtrusionValues.m
 %       getWindowLabelMap.m       
@@ -14,7 +14,8 @@
 
 %need to add "Statistics and Machine Learning Toolbox" in MATLABS add-on
 %section. 
-
+% Need to add Statistical Learning Toolbox: 
+% "https://www.mathworks.com/matlabcentral/fileexchange/12333-statistical-learning-toolbox?s_tid=FX_rc2_behav"
 %saves following figures: labelled cell mask with coordinates, area change,
 %and edge velocity heat maps 
 clc; clear; 
@@ -33,9 +34,9 @@ depths = [3,6,10,15,20,25];
 
 
 
- 
-root='F:\example_dataset_240522';
-rawdir=([root,filesep,'cropped',filesep, strcat(num2str(cells(1,place))),filesep,'output']); %
+rawdir = 'C:\Users\marsh\OneDrive - McGill University\research paper\results good_Feb2023\Fig 5\good cell examples for ezrin probe\-ex1\output'; 
+%root='F:\example_dataset_240522';
+%rawdir=([root,filesep,'cropped',filesep, strcat(num2str(cells(1,place))),filesep,'output']); %
 datadir=([rawdir,filesep,'edge_vels', filesep,  strcat('edge vel mapping_',num2str(depths(1, depth)))]); 
 if ~exist(datadir)
     mkdir(datadir)
@@ -59,8 +60,8 @@ binning=1;            %only change if binning is changed while using same object
 % Load previously determined sequence of masks
 
 
-load([rawdir,filesep,'RatioData_raw.mat']);
-load([rawdir,filesep,'ezrin_data', filesep,'CytoRatioData.mat']);
+load([rawdir,filesep,'RatioData.mat']);
+%load([rawdir,filesep,'ezrin_data', filesep,'CytoRatioData.mat']);
 
 
 %% %% delete unwanted frames (optional!!) 
@@ -115,7 +116,7 @@ selectedCell=1; %input which trajectory
 isConnect = false; %true if you had to connect broken trajectories
 
 thisTraj=traj{selectedCell};
-centroid_coordinates=zeros(2,size(imCAAXOutline,2));
+centroid_coordinates=zeros(2,size(imFRETOutline,2));
 cell_area=0; 
 if ~(isConnect) 
     start =thisTraj(1,5);
@@ -176,10 +177,10 @@ for imnum=start:start+size(thisTraj,1) -1
             for k=1:size(windowCoors{index},1)
                 
                 %comment out as needed for specific data 
-                 fretvals(k,index)=mean(imRatio_raw{index+empty_count}(labelMask{index}==k));
-                 myosin(k,index)=mean(im_mRuby{index+empty_count}(labelMask{index}==k));
-                 ezrin(k,index)=mean(ezrin_ratio{index+empty_count}(labelMask{index}==k));
-                 membrane_cyto(k,index)=mean(membrane_cyto_ratio{index+empty_count}(labelMask{index}==k));
+                 fretvals(k,index)=mean(imRatio{index+empty_count}(labelMask{index}==k));
+                % myosin(k,index)=mean(im_mRuby{index+empty_count}(labelMask{index}==k));
+                % ezrin(k,index)=mean(ezrin_ratio{index+empty_count}(labelMask{index}==k));
+                % membrane_cyto(k,index)=mean(membrane_cyto_ratio{index+empty_count}(labelMask{index}==k));
           
   
             end
