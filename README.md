@@ -4,8 +4,7 @@
 ![](GraphicalAbstract.png)
 
 - Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
-- Data can be found [here]().
-- Link to corresponding [GitHub repository](https://github.com/HayerLab/Marshall-Burghardt-SciAdv2024).
+- Data can be found [here](https://doi.org/10.20383/103.01016).
 
 ## Understanding file names
 ### Default naming convention
@@ -26,7 +25,7 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 All code used in the data processing/analysis found in the paper is present here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Step-by-step instructions listing all scripts used for each panel can be found in the README files in 'figure panel specific scripts and instructions'. 
 
 ## Use of violin plots 
-Throughout the paper, violinplots were sometimes created using code from 
+Violin plots for data visualization were created in part with thanks to:
 > Bechtold, Bastian, 2016. Violin Plots for Matlab, Github Project  
 > https://github.com/bastibe/Violinplot-Matlab, DOI: 10.5281/zenodo.455984
 ## How to navigate the data
