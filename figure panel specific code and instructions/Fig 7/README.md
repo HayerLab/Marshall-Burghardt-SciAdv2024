@@ -1,6 +1,8 @@
 # Excitable Rho dynamics control cell shape and motility by sequentially activating ERM proteins and actomyosin contractility
 ## Fig. 7. SLK/LOK-dependent ERM activation regulates cell morphology and is required for Rho-driven cell contractions
 ### Cell morphology quantification (Fig. 7 A-E)
+
+open preprocessing and single-cell analysis folder
 1. `Setup.m` 
 2. `Preprocessing.m`
 3. `segmentationOptimization.mlx` if needed
@@ -9,8 +11,10 @@
 
 Figure generation and plotting:
 1. `CellMorphologyExploration.mlx`
+
 ### Cpd31 rescues Nocodazole-induced cell blebbing (Fig. 7 F-J)
 
+open preprocessing and single-cell analysis folder
 1. `Setup.m` 
 2. `Preprocessing.m`
 3. `segmentationOptimization.mlx` as needed
