@@ -9,9 +9,9 @@
 
 ## Understanding file names
 ### Default naming convention
-Using the "jobs" feature of the Nikon HCS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. Inside each site folder, each channel data gets stored into a separate channel folder and the channel name gets appended to the file name (i.e.: 2_3_1_CFP.tiff). You will see this format in most of the data.
+Using the "jobs" feature of the Nikon HCS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. Inside each site folder, each channel data gets stored into a separate channel folder and the channel name gets appended to the file name (i.e.: 2_3_1_CFP.tiff). You will see this format in most of the data, and the code has been configured for this naming format.
 ### Alternative naming convention
-For certain figures, including Fig. 7 and Fig. S8c, we used a different naming convention.  Files acquired using the jobs feature were grouped together under a single folder and renamed. 
+For certain figures, including Fig. 7 and Fig. S8c, we used a different naming convention.  Files acquired using the jobs feature were grouped together under a single folder and renamed. The corresponding codes for these sections use the following convention: 
 Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 * YYMMDD: Acquisition date
 * FF: File index
@@ -21,6 +21,9 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 * CNDTN: Well name (experimental condition nickname)
 * TT: Treatment duration (in hours)
 * CHNL: Channel name
+
+## Navigating the repository 
+All code used in the analysis and processing of data found in the paper is present here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Step-by-step instructions for each panel and all scripts used are found in the README files in 'figure panel specific scripts and instructions'. 
 ## How to navigate the data
 The data is organized by figures in the paper. All the code necessary to preprocess, analyze the data and generate figures is inside the Code folder. 
 
