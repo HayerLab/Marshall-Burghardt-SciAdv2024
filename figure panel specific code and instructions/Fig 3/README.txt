@@ -8,5 +8,7 @@ For all dataset used in this analysis, need to first
 
 3A) run outlineTimeLapse.m 
 
-3C,E,G) run FRETbuildup.m script for individual protrusion-retraction transitions 
-        run FRETbuildupplot.m script to compile events and plot with average and +/- 95 CIs. 
+3C,E,G) open buildup plots folder 
+
+	- run FRETbuildup.m script for individual protrusion-retraction 	  	  transitions 
+	- run FRETbuildupplot.m script to compile events and plot with average 	 	  and +/- 95 CIs. 

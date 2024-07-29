@@ -1,4 +1,4 @@
-% script that compiles multiple protrusion/retraction events inot one graph
+% script that compiles multiple protrusion/retraction events into one graph
 % with mean and confidence intervals 
 
 clear; 

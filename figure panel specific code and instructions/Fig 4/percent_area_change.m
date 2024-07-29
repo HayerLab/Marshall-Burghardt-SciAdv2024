@@ -194,7 +194,7 @@ daspect([1 1 1]);
  
  [compare]= multcompare(stats) 
 
- save('fielpath\compiled.mat', 'compare', 'Y2', 'ML7', 'cntrl', 'Y2_ML7'); 
+ save('filepath\compiled.mat', 'compare', 'Y2', 'ML7', 'cntrl', 'Y2_ML7'); 
  
  
  

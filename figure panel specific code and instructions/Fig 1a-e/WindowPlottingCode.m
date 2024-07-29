@@ -71,10 +71,10 @@ binning = 1;            %only change if binning is changed while using same obje
 
 selectedCell = 1; %input which trajectory
 isConnect = true; % if you had to connect broken trajectories
-% deleteFrame = 46; % manually input frame that needs to be deleted
+
 thisTraj = traj{selectedCell};
 
-if ~isConnect %modifying this Traj code if you needed to correct broken trajectores
+if ~isConnect 
     start = thisTraj(1,6);
 else
     
@@ -122,14 +122,7 @@ for imnum=start:start+size(thisTraj,1) -1
             % Compute edge regions and local fret ratio values
             labelMask{index}=getWindowLabelMap(thisMask,windowCoors{index},(edgeDepthWidth/binning),edgeDepthDist); %
          
-%             for i=1:size(windowCoors{index},1)
-                
-%                 fretvals(i,index)=mean(imRatio{index+empty_count}(labelMask{index}==i));
-%                 myosin(k,index)=mean(im_mRuby{index+empty_count}(labelMask{index}==k));
-%                 actin(k,index) = mean(im_actin{index + empty_count}(labelMask{index} == k));
-%                 actin(k,index) = mean(masked_stack{index + empty_count}(labelMask{index} == k));
-          
-%             end
+
            MaskThisCell{index}=thisMask;  
   
 
@@ -156,9 +149,7 @@ for frameNum=1
     %imagesc(MaskThisCell{frameNum}); hold on;
     
     image = imFRETOutline{1,frameNum};
-   %image = immRuby_outline{1,frameNum};
-   % image =imRatio{1, 1};   
-   %image=ratio2RGB( image,[0.7 1.3]);
+  
       h = figure('visible','on');
 
       axis ij; 
@@ -171,7 +162,7 @@ for frameNum=1
     
      rectangle('Position', [380 55 216 216],'EdgeColor', [1 1 1]); 
      rectangle('Position', [390 65 45 5],'EdgeColor', [1 1 1], 'FaceColor', [1 1 1]); 
-%     
+    
  for frame = frameNum
     for w = 1:nFretWindows
         windowMask = (labelMask{1, frame} == w);        
@@ -203,7 +194,7 @@ end
     
      plot(windowCoors{frameNum}(:,2),windowCoors{frameNum}(:,1)); quiver(windowCoors{frameNum}(:,2),windowCoors{frameNum}(:,1),0.4*protvectF_binned(:,2),0.4*protvectF_binned(:,1),'Color',[0 1 0]);
     
-    % adding this to try to make the vectors different colours 
+    
     for k = 1:180
         if protvalsWindow(k, frameNum) >=5
           plot(windowCoors{frameNum}(k,2),windowCoors{frameNum}(k,1)); quiver(windowCoors{frameNum}(k,2),windowCoors{frameNum}(k,1),protvectF_binned(k,2),protvectF_binned(k,1),'Color',[1 1 0],  'LineWidth', 2, 'AutoScale','off');
@@ -218,8 +209,6 @@ end
        end 
     end
     
-    %plot binned vectors 
- 
  
     %plot all vectors, not smoothened
      %  plot(edgeCoors{frameNum}(:,2),edgeCoors{frameNum}(:,1)); quiver(edgeCoors{frameNum}(:,2),edgeCoors{frameNum}(:,1),0.2*protvect(:,2),0.2*protvect(:,1),'Color',[1 0 0]);

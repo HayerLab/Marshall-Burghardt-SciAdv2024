@@ -24,7 +24,9 @@ end
 
 
 for i = 1:size(position,2)    
-   imRatio_raw={}; 
+  
+    imRatio_raw={}; 
+    
     load([control_root,filesep, 'data', filesep, position{i}, '_RatioData_raw.mat'],'imRatio_raw'); 
     
     for j = 1:60 %here j goes up to number of frames 

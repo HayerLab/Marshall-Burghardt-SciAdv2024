@@ -28,8 +28,8 @@ cells = [1];
 for depth = 1:5 % number of edge depths you wish to analyze 
 
 
- %for 20x no binning, or 40x 2x2 bin etc. 0.325 um/px
-depths = [6; 
+%refers to number of pixels from cell edge
+depths = [3,6,10,15,20,25]; 
 
 
 

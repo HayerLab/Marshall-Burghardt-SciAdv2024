@@ -55,36 +55,27 @@ threshSeg=(x_bgMax+(8)*bgWidth);% 8 chosen as arbitrary threshold
 
 
  
- %% continued section to segment hotspots with percentile thresholding option
- % 2 methods: histo uses > 8x bg intensity, while 95 uses > 95% percentile
- % values. You choose which you desire 
+ %% continued section to segment hotspots 
  
- bounds_pERM =[(prctile(pERM_raw, 5, 'all')),prctile(pERM_raw, 90, 'all')]; 
- 
- pERM_high_95(pERM_raw <bounds_pERM(2)) = NaN; 
- ezrin_high_95(pERM_raw <bounds_pERM(2)) = NaN; 
  pERM_high_histo(pERM_raw <threshSeg) = NaN; 
  ezrin_high_histo(pERM_raw <threshSeg) = NaN; 
  
  
  
- stats = struct(); 
+ stats = struct();
+
  stats.ezrin_mean = nanmean(ezrin_ratio{1,1}, 'all');   
- stats.ezrin_mean_high_95 = nanmean(ezrin_high_95, 'all'); 
  stats.ezrin_mean_high_histo = nanmean(ezrin_high_histo, 'all'); 
- stats.ezrin_high_norm_95 = stats.ezrin_mean_high_95/stats.ezrin_mean; 
-  stats.ezrin_high_norm_histo = stats.ezrin_mean_high_histo/stats.ezrin_mean; 
+ stats.ezrin_high_norm_histo = stats.ezrin_mean_high_histo/stats.ezrin_mean; 
  
  
 stats.pERM_mean=nanmean(pERM_raw, 'all');  
-stats.pERM_mean_high_95 = nanmean(pERM_high_95, 'all');  
 stats.pERM_mean_high_histo = nanmean(pERM_high_histo, 'all');  
-stats.pERM_high_norm_95 =  stats.pERM_mean_high_95/stats.pERM_mean; 
 stats.pERM_high_norm_histo =  stats.pERM_mean_high_histo/stats.pERM_mean; 
  
   f1 = figure; 
  
-  imagesc(pERM_high_95, [0 100]);
+  imagesc(pERM_high_histo, [0 100]);
   hold off; 
    
   f2 = figure; 
@@ -105,27 +96,25 @@ stats.pERM_high_norm_histo =  stats.pERM_mean_high_histo/stats.pERM_mean;
  %% 
   saveas(f1,strcat(datadir, filesep,'pERM_high_90.fig'))
  saveas(f2,strcat(datadir, filesep,'pERM_high_histo.fig'))
-  saveas(f3,strcat(datadir, filesep,'ezrin_high_90.fig'))
+  saveas(f3,strcat(datadir, filesep,'ezrin_high_histo.fig'))
   saveas(f4,strcat(datadir, filesep,'ezrin_high_histo.fig'))
 
 
- save([datadir, filesep, 'pERM_ezrin_statistics.mat'], 'maskFinal', 'pERM_raw', 'pERM_high_95', 'pERM_high_histo' , 'ezrin_ratio', 'ezrin_high_histo','ezrin_high_95', 'stats', 'threshSeg');  
-ezrin_high_norm_array_95 = [ezrin_high_norm_array_95, stats.ezrin_high_norm_95]; 
+ save([datadir, filesep, 'pERM_ezrin_statistics.mat'], 'maskFinal', 'pERM_raw', 'pERM_high_histo' , 'ezrin_ratio', 'ezrin_high_histo', 'stats', 'threshSeg');  
+ 
 ezrin_high_norm_array_histo = [ezrin_high_norm_array_histo, stats.ezrin_high_norm_histo]; 
-pERM_high_norm_array_95 = [pERM_high_norm_array_95, stats.pERM_high_norm_95]; 
+
 pERM_high_norm_array_histo = [pERM_high_norm_array_histo, stats.pERM_high_norm_histo]; 
 end 
 
  overalldata = struct(); 
  
-overalldata.ezrin_average_90= mean(ezrin_high_norm_array_95);
+
 overalldata.ezrin_average_histo = mean(ezrin_high_norm_array_histo);
-overalldata.pERM_average_90 = mean(pERM_high_norm_array_95);
 overalldata.pERM_average_histo = mean(pERM_high_norm_array_histo);
 
-overalldata.ezrin_90= ezrin_high_norm_array_95; 
+
 overalldata.ezrin_histo = ezrin_high_norm_array_histo; 
-overalldata.pERM_90 = pERM_high_norm_array_95;
 overalldata.pERM_histo = pERM_high_norm_array_histo;
 
  save(['data location',filesep,  'hotspot averages.mat'], 'overalldata');  

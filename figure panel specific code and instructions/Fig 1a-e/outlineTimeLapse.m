@@ -1,4 +1,6 @@
-%root ='F:\Seph\research paper\Fig 1'; 
+%requires edgeCoors, which is generated using the script Edge_tracking, as
+%well as imFRETOutline or an equivalent image to overlay the edge changes
+%onto for visualization
 
 colour_array =jet(26);
  

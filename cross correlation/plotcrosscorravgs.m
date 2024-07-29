@@ -37,7 +37,7 @@ for loop=1:size(cells,2)
    protExp_arr(isnan(protExp_arr))=0; 
     
     
-    %using CLT to shift each distribution to a normal distribution
+    %using CLT to shift each distribution to a standard normal distribution
     
     Z_edge=( (edgeVel_arr_adjusted-nanmean(edgeVel_arr_adjusted(:))) / std(edgeVel_arr_adjusted(:))); 
     Z_prot=( (protExp_arr-nanmean(protExp_arr(:))) / std(protExp_arr(:)));
