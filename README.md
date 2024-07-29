@@ -4,8 +4,7 @@
 ![](GraphicalAbstract.png)
 
 - Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
-- Data can be found [here]().
-- Link to corresponding [GitHub repository](https://github.com/HayerLab/Marshall-Burghardt-SciAdv2024).
+- Data can be found [here](https://doi.org/10.20383/103.01016).
 
 ## Understanding file names
 ### Default naming convention
