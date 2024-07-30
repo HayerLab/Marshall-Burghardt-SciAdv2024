@@ -3,7 +3,7 @@ function getFRETDataHCS_stacked_FRET(cellNum,rawdir,datadir, threshold, pX, pY)
 
 % Used non built-in subfunctions: 
 %
-%   dualviewAlignFromFittedSurface
+%   dualviewAlignFromFittedSurfacecrop
 %   getBGMask
 %   subBG
 %   getCellMask

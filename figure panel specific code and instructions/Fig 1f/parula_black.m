@@ -5,5 +5,5 @@ if nargin<1
     m=255;
 end
 h=parula(m);
-h=[0 0 0; h];
+h=[0 0 0; h]; 
 
