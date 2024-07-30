@@ -6,13 +6,13 @@ Cite as "Marshall-Burghardt *et.al.*, Science Advances, 2024"
 ![](GraphicalAbstract.png)
 
 - Raw data can be downloaded [here](https://doi.org/10.20383/103.01016).
-- Reference to the main article in [bioRxiv](https://doi.org/10.1101/2023.12.19.572346), soon available as Marshall-Burghardt *et.al.*, 2024 in Science Advances.
+- Preprint: [bioRxiv](https://doi.org/10.1101/2023.12.19.572346), to be published as Marshall-Burghardt *et.al.*, 2024 in Science Advances.
 
 ## About
-This repository contains the code used for the data analysis presented in the paper for transparency. It is not intended as a ready-to-use resource package for other datasets and comes with no warranty or liability. We have made our best to declare any credits and attributions according to their corresponding licenses, please let us know if any corrections are needed.
+This repository contains MATLAB code used for image processing and data analysis throughout our study. It is not intended as a ready-to-use resource package and it may not work without modifications for analysis of other datasets.
 
 ## Navigating the code repository 
-MATLAB image analysis code used for image processing and analysis throughout our study is provided here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Additional instructions for analysis related to specific figure panels can be found in the README files in 'figure panel specific scripts and instructions'. 
+Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'. Additional instructions for analysis related to specific figure panels can be found in the README files in 'figure panel specific scripts and instructions'. 
 
 ### FRET, cell edge velocity tracking, and window analysis 
 The ratiometric FRET, cell edge velocity tracking, and window analysis code uses functions written by Sean Collins, as described in:
