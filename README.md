@@ -22,7 +22,7 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 * TT: Treatment duration (in hours)
 * CHNL: Channel name
 
-## Navigating the repository 
+## Navigating the code repository 
 MATLAB image analysis code used for image processing and analysis throughout our study is provided here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Additional instructions for analysis related to specific figure panels can be found in the README files in 'figure panel specific scripts and instructions'. 
 
 ## FRET, cell edge velocity tracking, and window analysis 
