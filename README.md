@@ -1,12 +1,9 @@
 # Excitable Rho dynamics control cell shape and motility by sequentially activating ERM proteins and actomyosin contractility
 [Seph Marshall-Burghardt](https://orcid.org/0009-0000-7634-9768), [Rodrigo Migueles-Ramirez](https://orcid.org/0000-0002-6087-1348), [Qiyao Lin](https://orcid.org/0009-0003-6436-9237), [Nada El Baba](https://orcid.org/0000-0002-2658-8426), [Rayan Saada](), [Mustakim Umar](), [Kian Mavalwala](https://orcid.org/0009-0009-9631-9852), [Arnold Hayer](https://orcid.org/0000-0001-7808-8880)
-
+Science Advances, 2024
 ![](GraphicalAbstract.png)
 
-- Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
 - Raw data can be downloaded [here](https://doi.org/10.20383/103.01016).
-
-
 
 ## Understanding file names
 ### Default naming convention
