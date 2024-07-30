@@ -27,14 +27,14 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 MATLAB image analysis code used for image processing and analysis throughout our study is provided here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Additional instructions for analysis related to specific figure panels can be found in the README files in 'figure panel specific scripts and instructions'. 
 
 ## FRET, cell edge velocity tracking, and window analysis 
-The ratiometric FRET, cell edge velocity tracking, and window analysis code uses functions written by Sean Collins, described in:
-> Yang, HW., Collins SR., & Meyer, T., "Locally excitable Cdc42 signals steer cells during chemotaxis". Nat Cell Biol 18(2), 191–201 (2016). https://doi.org/10.1038/ncb3292
+The ratiometric FRET, cell edge velocity tracking, and window analysis code uses functions written by Sean Collins, as described in:
+> Yang HW., Collins SR., & Meyer, T., "Locally excitable Cdc42 signals steer cells during chemotaxis". Nat Cell Biol 18(2), 191–201 (2016). https://doi.org/10.1038/ncb3292
  
 This code also uses: 
 > ANN:Approximate Nearest Neighbours Version 1.1.2. Copyright (c) 1997-2010 University of Maryland and Sunil Arya and David Mount. http://www.cs.umd.edu/~mount/ANN/
 
-## Quantiative immunofluorescnce 
-The quantitative immunofluorescence code uses functions written by Mingyu Chung, first described in:
+## Quantiative immunofluorescence 
+The quantitative immunofluorescence code uses functions written by Mingyu Chung, as described in:
 > Cappell SD., Chung M., Jaimovich A., Spencer SL., Meyer T. "Irreversible APCCdh1 inactivation underlies the point of no return for cell-cycle entry". Cell 166(1), 167-180 (2016). https://doi.org/10.1016/j.cell.2016.05.077
 
 ## Violin plots 
