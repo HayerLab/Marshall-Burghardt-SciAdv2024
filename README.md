@@ -5,31 +5,12 @@
 
 - Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
 - Data can be found [here](https://doi.org/10.20383/103.01016).
-
-
-
-## Navigating the repository 
-All code used in the data processing/analysis found in the paper is present here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Step-by-step instructions listing all scripts used for each panel can be found in the README files in 'figure panel specific scripts and instructions'. 
-
-## MATLAB toolboxes 
-Running this code requires the following MATLAB toolboxes: curve fitting, image processing, statistics and machine learning, as well as [Statistical Learning Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/12333-statistical-learning-toolbox?s_tid=FX_rc2_behav) by Dahua Lin. 
-## Edge Tracking 
-Code used for cell tracking for edge velocity analysis was adapted with gratitude from the following study: 
-Yang, H., Collins, S. & Meyer, T. Locally excitable Cdc42 signals steer cells during chemotaxis. Nat Cell Biol 18, 191–201 (2016). https://doi.org/10.1038/ncb3292 
-
-## Add reference to Cappell et al. 2016
-
-This code also uses ANN:Approximate Nearest Neighbours Version 1.1.2. Copyright (c) 1997-2010 University of Maryland and Sunil Arya and David
-Mount. http://www.cs.umd.edu/~mount/ANN/ 
-## Use of violin plots 
-Violin plots for data visualization were created in part with thanks to:
-> Bechtold, Bastian, 2016. Violin Plots for Matlab, Github Project  
-> https://github.com/bastibe/Violinplot-Matlab, DOI: 10.5281/zenodo.455984
+- The latest version of our code related to this study is available on https://github.com/HayerLab/Marshall-Burghardt-SciAdv2024
 
 
 ## Understanding file names
 ### Default naming convention
-Using the "jobs" feature of the Nikon HCS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. This is followed by the channel name or abbreviation (i.e.: 2_3_1_CFP.tiff). When the jobs feature was not used, primary data is stored in ND2 files, and then converted to TIFF files following this naming convention. You will see this format in most of the data.
+Using the "jobs" feature of the Nikon HCS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. This is followed by the channel name or abbreviation (i.e.: 2_3_1_CFP.tiff). You will see this format in most of the data, and the code has been configured for this naming format.
 ### Alternative naming convention
 For certain figures, including Fig. 7 and Fig. S8c, we used a different naming convention.  Files acquired using the jobs feature were grouped together under a single folder and renamed. The corresponding codes for these sections use the following convention: 
 Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
@@ -41,6 +22,24 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 * CNDTN: Well name (experimental condition nickname)
 * TT: Treatment duration (in hours)
 * CHNL: Channel name
+
+## Navigating the repository 
+MATLAB image analysis code used for image processing and analysis throughout our study is provided here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Additional instructions for analysis related to specific figure panels can be found in the README files in 'figure panel specific scripts and instructions'. The 
+
+## FRET, cell edge velocity tracking, and window analysis 
+The ratiometric FRET, cell edge velocity tracking, and window analysis code uses functions written by Sean Collins, described:
+> Yang, HW., Collins SR., & Meyer, T., "Locally excitable Cdc42 signals steer cells during chemotaxis". Nat Cell Biol 18(2), 191–201 (2016). https://doi.org/10.1038/ncb3292 
+This code also uses 
+> ANN:Approximate Nearest Neighbours Version 1.1.2. Copyright (c) 1997-2010 University of Maryland and Sunil Arya and David Mount. http://www.cs.umd.edu/~mount/ANN/
+
+## Quantiative immunofluorescnce 
+The quantitative immunofluorescence code uses functions written by Mingyu Chung, described in
+> Cappell SD., Chung M., Jaimovich A., Spencer SL., Meyer T. "Irreversible APCCdh1 Inactivation Underlies the Point of No Return for Cell-Cycle Entry". Cell 166(1), 167-180 (2016). https://doi.org/10.1016/j.cell.2016.05.077
+
+## Violin plots 
+Violin plots for data visualization were created in part with thanks to:
+> Bechtold, Bastian, 2016. Violin Plots for Matlab, Github Project  
+> https://github.com/bastibe/Violinplot-Matlab, DOI: 10.5281/zenodo.455984
 
 
 
