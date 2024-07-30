@@ -5,8 +5,6 @@ function correctBleachingExp2_stacked(fitpara,datadir, fitpara_mRuby)
 % bleaching correction by division by linear bleaching function normalized
 % by the median of its values. 
 
-%remember to add in/remove 'position' tag for all the file names depending
-%on if calling the stacked versions or not 
 
 load([datadir,filesep, 'RatioData_raw.mat'],'imRatio_raw','imFRETOutline','im_mRuby_raw','immRuby_outline');
 load([datadir,filesep,'Bleach_raw.mat']);
