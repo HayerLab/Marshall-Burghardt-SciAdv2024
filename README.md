@@ -23,6 +23,9 @@ Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
 
 ## Navigating the repository 
 All code used in the data processing/analysis found in the paper is present here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Step-by-step instructions listing all scripts used for each panel can be found in the README files in 'figure panel specific scripts and instructions'. 
+
+## MATLAB toolboxes 
+Running this code requires the following MATLAB toolboxes: curve fitting, image processing, statistics and machine learning, as well as [Statistical Learning Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/12333-statistical-learning-toolbox?s_tid=FX_rc2_behav) by Dahua Lin. 
 ## Edge Tracking 
 Code used for cell tracking for edge velocity analysis was adapted with gratitude from the following study: 
 Yang, H., Collins, S. & Meyer, T. Locally excitable Cdc42 signals steer cells during chemotaxis. Nat Cell Biol 18, 191–201 (2016). https://doi.org/10.1038/ncb3292 
