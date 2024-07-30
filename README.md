@@ -9,18 +9,7 @@ Science Advances, 2024
 
 ## Understanding file names
 ### Default naming convention
-Using the "jobs" feature of the Nikon HCS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. This is followed by the channel name or abbreviation (i.e.: 2_3_1_CFP.tiff). You will see this format in most of the data, and the code has been configured for this naming format.
-### Alternative naming convention
-For certain figures, including Fig. 7 and Fig. S8c, we used a different naming convention.  Files acquired using the jobs feature were grouped together under a single folder and renamed. The corresponding codes for these sections use the following convention: 
-Each file key is YYMMDD-FF-SSS-CC-WW-CNDTN-TT-CHNL where:
-* YYMMDD: Acquisition date
-* FF: File index
-* SSS: Site index
-* CC: Crop index (when applicable)
-* WW: Well index (Ex.: B3)
-* CNDTN: Well name (experimental condition nickname)
-* TT: Treatment duration (in hours)
-* CHNL: Channel name
+Using the "jobs" feature of the Nikon NIS software, the microscope takes a set number of images per well and stores the images as TIFF files in folders named using the R_C_S format where R and C are the row and the column index in the 96-well plate, respectively, and S is the index of sites. This is followed by the channel name or abbreviation (i.e.: 2_3_1_CFP.tiff). You will see this format in most of the data, and the code has been configured for this naming format.
 
 ## Navigating the code repository 
 MATLAB image analysis code used for image processing and analysis throughout our study is provided here. Certain script and function packages are used multiple times throughout the paper and have their own unique folders, whereas panel-specific scripts are found in the folder 'figure panel specific scripts and instructions'.  Additional instructions for analysis related to specific figure panels can be found in the README files in 'figure panel specific scripts and instructions'. 
