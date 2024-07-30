@@ -32,7 +32,7 @@ The ratiometric FRET, cell edge velocity tracking, and window analysis code uses
 This code also uses: 
 > ANN:Approximate Nearest Neighbours Version 1.1.2. Copyright (c) 1997-2010 University of Maryland and Sunil Arya and David Mount. http://www.cs.umd.edu/~mount/ANN/
 
-### Quantiative immunofluorescence 
+### Quantitative immunofluorescence 
 The quantitative immunofluorescence code uses functions written by Mingyu Chung, as described in:
 > Cappell SD., Chung M., Jaimovich A., Spencer SL., Meyer T. "Irreversible APCCdh1 inactivation underlies the point of no return for cell-cycle entry". Cell 166(1), 167-180 (2016). https://doi.org/10.1016/j.cell.2016.05.077
 
