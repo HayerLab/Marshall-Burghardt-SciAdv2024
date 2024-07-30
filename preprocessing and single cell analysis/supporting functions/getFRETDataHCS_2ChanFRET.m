@@ -45,7 +45,7 @@ key=[datadir,filesep,position,'_RatioData_raw.mat'];
 if ~exist(key)
 %%%%%% Set up
 
-load([bgdir,filesep,'alignment parameters pX pY_day2.mat'],'pX','pY');
+load([bgdir,filesep,'alignment parameters pX pY.mat'],'pX','pY');
 
 %%%%%% Call background images
  binning=1; % relevant if alingment images and data images were acquired using distinct binning settings
@@ -109,9 +109,9 @@ for frameNum=1:length(CFP_files)
 end
 %%%%%% Bleaching correction: Detrmine linear fit parameters for FRET/CFP decay
 bleach_1=nanmean(vect(imRatio_raw{1}));
-bleach_raw = {};  
+
 for frameNum=1:length(imRatio_raw)
-   bleach_raw(frameNum)=nanmean(vect(imRatio_raw{frameNum}));
+  bleach_raw(frameNum)=nanmean(vect(imRatio_raw{frameNum}));
  
 end
 save([datadir,filesep,position,'_RatioData_raw.mat'],'maskFinal','cellCoors','imRatio_raw','imFRETOutline','-v7.3');  

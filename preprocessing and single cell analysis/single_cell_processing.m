@@ -2,10 +2,10 @@ re%% single cell cell preprocessing before edge tracking
 % manually crops cells of interest from tiff_stacks 
 %generates cell masks, and FRET/fluorescent channel data 
 
-%% initiatialization
+%% initialization
 clear; clc; 
 
- root = 'F:\example_dataset_240522';
+ root = 'C:\Users\person\TEST RUN';
  
  tiffDir = ([root, filesep,'tiff_stacks']); 
     
@@ -36,7 +36,7 @@ filekey = '1_1_1';
 % removed if not needed
 
 bgcyto = ([bgpath,filesep, 'AVG_bgcyto.tif']); 
-bgCFP = ([bgpath, filesep, 'AVG-BG-CFP.tif']); 
+bgCFP = ([bgpath, filesep, 'AVG_bgCFP.tif']); 
 bgFRET = ([bgpath,filesep,  'AVG_bgFRET.tif']);
 bgmRuby=([bgpath, filesep,  'AVG_bgmRuby.tif']);
           
@@ -50,7 +50,7 @@ bgmRuby=([bgpath, filesep,  'AVG_bgmRuby.tif']);
 
 
 
- bg_CFP_image = double(readTIFFstack(bgCAAX)); 
+ bg_CFP_image = double(readTIFFstack(bgCFP)); 
  bg_FRET_image = double(readTIFFstack(bgFRET)); 
 bg_mRuby_image = double(readTIFFstack(bgmRuby)); 
 bg_cyto_image = double(readTIFFstack(bgcyto)); 
@@ -74,13 +74,14 @@ mRuby_stack=double(readTIFFstack(mRuby));
             
       [stackmRuby, cropArea] = serimcropold(mRuby_stack,mean(mRuby_stack,3));          
       Stack2TIFF(stackmRuby, [cellDir, filesep,'mRuby.tif']);
+
                     
        stackCFP = readFileToStack(CFP); 
        stackCFP = imcrop3(stackCFP, [cropArea(1), cropArea(2), 1,...
-       cropArea(3), cropArea(4), size(stackCAAX,3)-1]);                    
+       cropArea(3), cropArea(4), size(stackCFP,3)-1]);                    
        Stack2TIFF(stackCFP, [cellDir, filesep, 'CFP.tif']);
        
-       stackFRET = readFileToStack(pERM); 
+       stackFRET = readFileToStack(FRET); 
        stackFRET = imcrop3(stackFRET, [cropArea(1), cropArea(2), 1,...
        cropArea(3), cropArea(4), size(stackFRET,3)-1]);                    
        Stack2TIFF(stackFRET, [cellDir, filesep, 'FRET.tif']);
@@ -106,7 +107,7 @@ mRuby_stack=double(readTIFFstack(mRuby));
             
       cyto_bg_crop = imcrop(uint16(bg_cyto_image), [cropArea(1), cropArea(2), cropArea(3), cropArea(4)]); 
       imwrite(cyto_bg_crop,[cellDir, filesep, 'cyto_bg.tif'] , "WriteMode", "overwrite", "Compression", "none");
-                    
+                     
                    
             clear stack;
   close all; 
@@ -123,19 +124,22 @@ clc;
 
 bleachdir=([root,filesep,'data']);
 bgdir=[root,filesep,'background'];
+
+  load([bgpath, filesep, 'alignment parameters pX pY.mat']); 
+  
+  %load which are needed
   load([bleachdir,filesep,'bleachingcurve.mat']);
   load([bleachdir,filesep,'bleachingcurve_mRuby.mat']);
- load([bgpath, filesep, 'alignment parameters pX pY.mat']); 
- load([bleachdir,filesep,'bleachingcurve_cyto.mat']);
+  load([bleachdir,filesep,'bleachingcurve_cyto.mat']);
 
 
 %% Parallel loop
 % specify k in the for loop as number of cells you have cropped
 threshold = 3; 
-for k=1:29
+for k=1:1
   
    rawdir=[cropdir,filesep, strcat( num2str(k))]; 
-    load([rawdir,filesep,'alignment parameters pX pY.mat']);
+   
     
    datadir=[rawdir,filesep,'output'];
 
