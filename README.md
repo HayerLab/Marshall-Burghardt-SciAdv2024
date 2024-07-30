@@ -4,8 +4,8 @@
 ![](GraphicalAbstract.png)
 
 - Reference to the main article: [Marshall-Burghardt *et.al.*, 2024, Science Advances]()
-- Data can be found [here](https://doi.org/10.20383/103.01016).
-- The latest version of our code related to this study is available on https://github.com/HayerLab/Marshall-Burghardt-SciAdv2024
+- Raw data can be downloaded [here](https://doi.org/10.20383/103.01016).
+
 
 
 ## Understanding file names
