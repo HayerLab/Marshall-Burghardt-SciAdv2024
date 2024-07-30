@@ -27,6 +27,8 @@ All code used in the data processing/analysis found in the paper is present here
 Code used for cell tracking for edge velocity analysis was adapted with gratitude from the following study: 
 Yang, H., Collins, S. & Meyer, T. Locally excitable Cdc42 signals steer cells during chemotaxis. Nat Cell Biol 18, 191–201 (2016). https://doi.org/10.1038/ncb3292 
 
+## Add reference to Cappell et al. 2016
+
 This code also uses ANN:Approximate Nearest Neighbours Version 1.1.2. Copyright (c) 1997-2010 University of Maryland and Sunil Arya and David
 Mount. http://www.cs.umd.edu/~mount/ANN/ 
 ## Use of violin plots 
